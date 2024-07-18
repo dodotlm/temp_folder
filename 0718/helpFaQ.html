@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .logo_head_between_area_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; /* 원하는 높이 설정 */
+            width: 100%; /* 부모 요소가 화면 너비를 가득 채우도록 설정 */
+            background-color: white;
+        }
+        .logo_head_between_area {
+            width: 100%; /* 이미지의 너비를 100%로 설정 */
+            height: auto; /* 이미지의 높이를 자동으로 설정하여 비율을 유지 */
+        }
+        .head_area {
+            display: flex;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            background-color: white;
+            width: 100%;
+            height: 10vh;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .title_area{
+            margin-top: 3%;
+            color: white;
+            font-weight: bolder;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .content {
+            display: grid;
+            place-items: center;
+            background-color: black;
+            height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+        }
+        
+        .image_button{
+            float: left;
+            margin: 80px;
+            margin-bottom: 30%;
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+            z-index: 7;
+        }
+        .image_button:hover{
+            transform: scale(1.3); /* 이미지 확대 비율 */
+         }
+         .semititle{
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 25%;
+        }
+
+        /* .fade-in {
+            animation: fadeIn 1s forwards; 
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.5;
+            }
+        }
+        .semititle:hover {
+            transform: scale(1.1); 
+        }
+        */
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="guide.html">Guide</a>
+                <a href="news.html">News</a>
+                <a href="community.html">Community</a>
+                <a href="ranking.html">Ranking</a>
+                <a href="help.html">Help</a>
+            </div>
+            <div class="auth-links">
+                <a href="login.html">로그인</a> / <a href="join.html">회원가입</a>
+            </div>
+        </div>
+    </div>
+    <div class="logo_head_between_area_container">
+        <img src="assets/images/doors_title_header.png" class="logo_head_between_area" alt="Title Header">
+    </div>
+    <div class="head_area">
+        <p>FnQ</p>
+    </div>
+    <div class="content">
+        <div class="title_area">어떤 것이 궁금하신가요?</div>
+        <div class="image-container">
+            <a href="helpFaQ_purchase.html"><img src="assets/images/gyul.png" class="image_button" alt="Gyul Image"></a>
+            <a href="helpFaQ_account.html"><img src="assets/images/gye.png" class="image_button" alt="Gye Image"></a>
+            <a href="helpFaQ_etc.html"><img src="assets/images/etc.png" class="image_button" alt="Etc Image"></a>
+        </div>
+        <div class="semi_title" style="text-align: center;"><p>저희 더 도어즈 팀은 여러분들의 궁금증을 풀어드리기 위하여</p><p>최고의 노력을 다하고 있습니다.</p></div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
+                <p>더 도어 게임즈가 궁금하신가요?</p>
+            </a>
+            <p>©The Door Games</p>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.semititle').classList.add('fade-in');
+            }, 500); // 0.5초 후 페이드인
+        });
+    </script>
+</body>
+</html>

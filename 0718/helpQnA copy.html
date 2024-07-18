@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .logo_head_between_area_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; /* 원하는 높이 설정 */
+            width: 100%; /* 부모 요소가 화면 너비를 가득 채우도록 설정 */
+            background-color: white;
+        }
+        .logo_head_between_area {
+            width: 100%; /* 이미지의 너비를 100%로 설정 */
+            height: auto; /* 이미지의 높이를 자동으로 설정하여 비율을 유지 */
+        }
+        .head_area {
+            display: flex;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            background-color: white;
+            width: 100%;
+            height: 10vh;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .content {
+            display: grid;
+            place-items: center;
+            background-color: black;
+            height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+        }
+        .image-container {
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
+        .center_base_image,
+        .center_base_2_image,
+        .search_box {
+            max-width: 100%; /* 이미지의 최대 너비 설정 */
+            max-height: 100%; /* 이미지의 최대 높이 설정 */
+            grid-area: 1 / 1;
+        }
+        .center_base_2_image{
+            max-width: 95%; 
+            max-height: 95%;
+        }
+        .search_box{
+            margin-bottom: 1600px;
+        }
+        
+        .wrtn_button{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            right: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="guide.html">Guide</a>
+                <a href="news.html">News</a>
+                <a href="community.html">Community</a>
+                <a href="ranking.html">Ranking</a>
+                <a href="help.html">Help</a>
+            </div>
+            <div class="auth-links">
+                <a href="login.html">로그인</a> / <a href="join.html">회원가입</a>
+            </div>
+        </div>
+    </div>
+    <div class="logo_head_between_area_container">
+        <img src="assets/images/doors_title_header.png" class="logo_head_between_area" alt="Title Header">
+    </div>
+    <div class="head_area">
+        <p>Q&A</p>
+    </div>
+    <div class="content">
+        <div class="image-container">
+            <img src="assets/images/page_select_bar.png" class="search_box" alt="search_box" style="z-index: 5;">
+            <img src="assets/images/center_base.png" class="center_base_image" alt="Base Image" style="z-index: 3;">
+            <img src="assets/images/center_base_2.png" class="center_base_2_image" alt="Base Image 2" style="z-index: 4;">
+            <img src="assets/images/wrtn_button.png" class="wrtn_button" alt="wrtn_button" style="right: 15%;">
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-content">
+            <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
+                <p>더 도어 게임즈가 궁금하신가요?</p>
+            </a>
+            <p>©The Door Games</p>
+        </div>
+    </div>
+</body>
+</html>

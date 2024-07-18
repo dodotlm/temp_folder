@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .logo_head_between_area_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; /* 원하는 높이 설정 */
+            width: 100%; /* 부모 요소가 화면 너비를 가득 채우도록 설정 */
+            background-color: white;
+        }
+        .logo_head_between_area {
+            width: 100%; /* 이미지의 너비를 100%로 설정 */
+            height: auto; /* 이미지의 높이를 자동으로 설정하여 비율을 유지 */
+        }
+        .head_area {
+            display: flex;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            background-color: white;
+            width: 100%;
+            height: 10vh;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .content {
+            display: grid;
+            place-items: center;
+            background-color: black;
+            height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+        }
+        .image-container {
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
+        .center_image,
+        .center_base_image,
+        .center_base_2_image {
+            max-width: 70%; /* 이미지의 최대 너비 설정 */
+            max-height: 90%; /* 이미지의 최대 높이 설정 */
+            grid-area: 1 / 1;
+        }
+        .center_base_image {
+            max-width: 77%; /* 이미지의 최대 너비 설정 */
+            max-height: 90%; /* 이미지의 최대 높이 설정 */
+        }
+        .center_base_2_image {
+            max-width: 85%; /* 이미지의 최대 너비 설정 */
+            max-height: 75%; /* 이미지의 최대 높이 설정 */
+        }
+        .title_area {
+            justify-content: center; /* 수평 가운데 정렬 */
+            color: azure;
+            margin-top: 8%;
+            margin-bottom: 0%;
+            font-size: 50px;
+            font-weight: bolder;
+        }
+        .faq_button,
+        .qna_button,
+        .button_between {
+            float: left;
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+        }
+        .faq_button:hover,
+        .qna_button:hover {
+            transform: scale(1.1); /* 이미지 확대 비율 */
+        }
+        .button_area {
+            float: left;
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+        .comment-area-container {
+            display: flex;
+            flex-direction: column; /* 이미지를 수직으로 나열 */
+            align-items: center; /* 수평 가운데 정렬 */
+            position: relative;
+            margin-top: -150%; /* center_professor.png 상단에서 원하는 위치로 조정 */
+            z-index: 10; /* 이미지가 다른 요소 위에 표시되도록 설정 */
+        }
+        .comment-area-container img {
+            margin-bottom: 100px; /* 이미지 간격 설정 */
+            max-width: 550px; /* 각 이미지의 최대 너비 설정 */
+            max-height: 570px; /* 각 이미지의 최대 높이 설정 */
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+        }
+        .Comment1,
+        .Comment2,
+        .Comment3
+        {
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+        }
+        .Comment1:hover,
+        .Comment2:hover,
+        .Comment3:hover
+        {
+            transform: scale(1.1); /* 이미지 확대 비율 */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="guide.html">Guide</a>
+                <a href="news.html">News</a>
+                <a href="community.html">Community</a>
+                <a href="ranking.html">Ranking</a>
+                <a href="help.html">Help</a>
+            </div>
+            <div class="auth-links">
+                <a href="login.html">로그인</a> / <a href="join.html">회원가입</a>
+            </div>
+        </div>
+    </div>
+    <div class="logo_head_between_area_container">
+        <img src="assets/images/doors_title_header.png" class="logo_head_between_area" alt="Title Header">
+    </div>
+    <div class="head_area">
+        <p>FAQ</p>
+    </div>
+    <div class="content">
+        <p class="title_area">자주하는 질문 TOP5</p>
+        <div class="image-container">
+            <img src="assets/images/center_base.png" class="center_base_image" alt="Base Image">
+            <img src="assets/images/center_base_2.png" class="center_base_2_image" alt="Base Image 2">
+            <img src="assets/images/center_professor.png" class="center_image" alt="Centered Image">
+            <div class="comment-area-container">
+                <img src="assets/images/comment_area.png" class="Comment1" alt="Comment 1">
+                <img src="assets/images/comment_area.png" class="Comment2" alt="Comment 2">
+                <img src="assets/images/comment_area.png" class="Comment3" alt="Comment 3">
+                
+            </div>
+            <article class="button_area">
+                <a href="helpFaQ.html"><img src="assets/images/faq_button.png" class="faq_button" alt="faq_button"></a>
+                <img src="assets/images/button_between.png" class="button_between" alt="button_between">
+                <a href="helpQnA.html"><img src="assets/images/qna_button.png" class="qna_button" alt="qna_button"></a>
+            </article>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
+                <p>더 도어 게임즈가 궁금하신가요?</p>
+            </a>
+            <p>©The Door Games</p>
+        </div>
+    </div>
+</body>
+</html>

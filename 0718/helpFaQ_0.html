@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .logo_head_between_area_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; /* 원하는 높이 설정 */
+            width: 100%; /* 부모 요소가 화면 너비를 가득 채우도록 설정 */
+            background-color: white;
+        }
+        .logo_head_between_area {
+            width: 100%; /* 이미지의 너비를 100%로 설정 */
+            height: auto; /* 이미지의 높이를 자동으로 설정하여 비율을 유지 */
+        }
+        .head_area {
+            display: flex;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            background-color: white;
+            width: 100%;
+            height: 10vh;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .content {
+            display: grid;
+            place-items: center;
+            background-color: black;
+            height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+        }
+        .image-container {
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
+        .center_base_image,
+        .center_base_2_image {
+            max-width: 100%; /* 이미지의 최대 너비 설정 */
+            max-height: 100%; /* 이미지의 최대 높이 설정 */
+            grid-area: 1 / 1;
+        }
+        .center_base_1_image {
+            max-width: 150%; 
+            max-height: 100%;
+            z-index: 5;
+        }
+        .center_base_2_image {
+            max-width: 95%; 
+            max-height: 90%;
+            z-index: 6;
+        }
+        .title_area {
+            justify-content: center; /* 수평 가운데 정렬 */
+            color: azure;
+            margin-top: 8%;
+            margin-bottom: 10%;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            margin-top: -307%;
+        }
+        .image-grid img {
+            margin: 0 40px; /* 이미지 간격 설정 */
+            max-width: 200px; /* 각 이미지의 최대 너비 설정 */
+            max-height: 200px; /* 각 이미지의 최대 높이 설정 */
+        }
+        .image_button{
+            float: left;
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+            z-index: 7;
+        }
+        .image_button:hover{
+            transform: scale(1.3); /* 이미지 확대 비율 */
+         }
+        
+        .faq_comment_area { /*코멘트 하얀색*/
+            margin-top: -1850px;
+            z-index: 9;
+        }
+         .faq_comment { /*코멘트 6개*/
+            display: flex;
+            flex-direction: column; /* 세로로 정렬 */
+            align-items: center; /* 가운데 정렬 */
+            margin-top: -1800px; /* 원하는 위치에 맞게 조정 */
+            z-index: 10;
+            
+        }
+        .faq_comment1{
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+        }
+        .faq_comment1:hover{
+            transform: scale(1.1); /* 이미지 확대 비율 */
+        }
+
+         .faq_comment img{
+            margin: 30px; /* 이미지 간격 설정 */
+            width: 750px; /* 각 이미지의 최대 너비 설정 */
+            height: 150px; /* 각 이미지의 최대 높이 설정 */
+         }
+         .page_selector{
+            margin-top: 100px;
+            margin-bottom: 100px;
+         }
+         .page_selector_bar{
+            z-index: 8;
+         }
+         .page_selector_text1{ /*다음페이지*/
+            position: absolute;
+            bottom: 5.7%;
+            color: white;
+            z-index: 9;
+            left:25%;
+            font-weight: bolder;
+            
+         }
+         .page_selector_text2{ /*이전페이지*/
+            position: absolute;
+            bottom: 5.7%;
+            right: 25%;
+            color: white;
+            z-index: 9;
+            font-weight: bolder;
+         }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="guide.html">Guide</a>
+                <a href="news.html">News</a>
+                <a href="community.html">Community</a>
+                <a href="ranking.html">Ranking</a>
+                <a href="help.html">Help</a>
+            </div>
+            <div class="auth-links">
+                <a href="login.html">로그인</a> / <a href="join.html">회원가입</a>
+            </div>
+        </div>
+    </div>
+    <div class="logo_head_between_area_container">
+        <img src="assets/images/doors_title_header.png" class="logo_head_between_area" alt="Title Header">
+    </div>
+    <div class="head_area">
+        <p>FnQ</p>
+    </div>
+    <div class="content">
+        <div class="title_area">자주하는 질문 TOP5</div>
+        <div class="image-container">
+            <img src="assets/images/center_base.png" class="center_base_image" alt="Base Image">
+            <img src="assets/images/center_base_2.png" class="center_base_2_image" alt="Base Image 2">
+            <div class="image-grid">
+                <img src="assets/images/gyul.png" class="image_button" alt="Gyul Image">
+                <img src="assets/images/gye.png" class="image_button" alt="Gye Image">
+                <img src="assets/images/etc.png" class="image_button" alt="Etc Image">
+            </div>
+            <div class="faq_comment_area"><img src="assets/images/FAQ_comment_area_long.png" alt="faq_comment_area"></div>
+             <div class="faq_comment"><a href=""><img src="assets/images/FAQ_comment.png" class="faq_comment1" alt="faq_comment1">
+                <p style="position: absolute; top: 440px; left: 230px;">강사님께 여쭤봤는데 이미지 위에 올라가는 텍스트는 absolute로 줄 수 밖에 없다고 하네요<br>그래서 지금처럼 계속 진행하기 위해서는 텍스트를 넣는 방식조차 이미지 넣듯 해야 할 거랍니다.ㅋㅋ</p>
+                </a>
+                <a href=""><img src="assets/images/FAQ_comment.png" class="faq_comment1" alt="faq_comment2">
+                <p style="position: absolute; top: 650px; left: 230px;">그런 의미에서 디자인을 수정하거나 (도형 투성이인 디자인을 버리고 무난한 디자인으로 선회)</p>
+                </a>
+                <a href=""><img src="assets/images/FAQ_comment.png" class="faq_comment1" alt="faq_comment3">
+                <p style="position: absolute; top: 790px; left: 230px;">아니면 수민 누나꺼랑 게시판 디자인을 통일하거나로 선회해야 할 것 같슴다. 주말끼고 담주 동안 <br>빡씨게 하면 완성은 할듯 함다.<br>사실 저번주는 정처산기랑 스프링 땜에 쉬는시간에만 할 수밖에 없긴 했는데...<br>변명이고 일요일에 끝나자마자 저것만 할겟슴다 믿어주심시오
+                </p>
+                </a>
+                <a href=""><img src="assets/images/FAQ_comment.png" class="faq_comment1" alt="faq_comment4">
+                <p style="position: absolute; top: 1090px; left: 230px;">디자인을 할 때 로저스톤마냥 또 신나서 뒷일 생각 안하고 해버린 저를 욕해주십셔</p>
+                </a>
+                <a href=""><img src="assets/images/FAQ_comment.png" class="faq_comment1" alt="faq_comment5">
+                <p style="position: absolute; top: 1300px; left: 230px;">회의할 때 말하려고 했는데...</p>
+                </a>
+                <a href=""><img src="assets/images/FAQ_comment.png" class="faq_comment1" alt="faq_comment6">
+                <p style="position: absolute; top: 1510px; left: 230px;">근데 저만 몰랐나요 이미지 위에 텍스트를 줄 때는 absolute 밖에 안된다는 거...?</p>
+                </a></div>
+                <div class="page_selector">
+                    <div class="page_selector_text1" >이전 페이지</div>
+                    <div class="page_selector_text2">다음 페이지</div>
+                    <img src="assets/images/page_select_bar.png" class="page_select_bar" alt="page_select_bar">
+                </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
+                <p>더 도어 게임즈가 궁금하신가요?</p>
+            </a>
+            <p>©The Door Games</p>
+        </div>
+    </div>
+</body>
+</html>

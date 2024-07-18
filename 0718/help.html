@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .logo_head_between_area_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; /* 원하는 높이 설정 */
+            width: 100%; /* 부모 요소가 화면 너비를 가득 채우도록 설정 */
+            background-color: white;
+        }
+        .logo_head_between_area {
+            width: 100%; /* 이미지의 너비를 100%로 설정 */
+            height: auto; /* 이미지의 높이를 자동으로 설정하여 비율을 유지 */
+        }
+        .head_area {
+            display: flex;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            background-color: white;
+            width: 100%;
+            height: 10vh;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+        .content{
+            background-color: black;
+            background-image: url('assets/images/center_professor.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        .semi_title{
+            color: white;
+            font-weight: bolder;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .commentbox1{
+            color: black;
+            opacity: 0; /* 초기 상태에서 보이지 않게 설정 */
+            width: 20vw;
+            height: 8vh;
+            margin-top: 50px;
+            margin-left: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+            border-radius: 2%;
+        }
+        .commentbox2{
+            color: black;
+            opacity: 0; /* 초기 상태에서 보이지 않게 설정 */
+            width: 20vw;
+            height: 8vh;
+            margin-top: 50px;
+            margin-left: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+            border-radius: 2%;
+        }
+        .commentbox3{
+            color: black;
+            opacity: 0; /* 초기 상태에서 보이지 않게 설정 */
+            width: 20vw;
+            height: 8vh;
+            margin-top: 50px;
+            margin-left: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+            border-radius: 2%;
+        }
+        .commentbox1:hover,
+        .commentbox2:hover,
+        .commentbox3:hover{
+            transform: scale(1.1); /* 이미지 확대 비율 */
+        }
+        .fade-in {
+            animation: fadeIn 1s forwards; /* 페이드인 애니메이션 추가 */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.5;
+            }
+        }
+        .commentbox1:hover, .commentbox2:hover, .commentbox3:hover {
+            transform: scale(1.1); /* 이미지 확대 비율 */
+        }
+        .button_area{
+            display: flex;
+            justify-content: center;
+        }
+        .faq_button{
+            display: inline-block;
+            color: black;
+            margin: 20px;
+            width: 4vw;
+            height: 2vh;
+            background-color: white;
+            opacity: 75%;
+            text-align: center;
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+            border-radius: 3%;
+            font-weight: bolder;
+            font-size: xx-small;
+            text-align: center;
+        }
+        .qna_button{
+            display: inline-block;
+            color: black;
+            margin: 20px;
+            width: 4vw;
+            height: 2vh;
+            background-color: white;
+            opacity: 75%;
+            text-align: center;
+            transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+            border-radius: 3%;
+            font-weight: bolder;
+            font-size: xx-small;
+            text-align: center;
+        }
+        .faq_button:hover,
+        .qna_button:hover {
+            transform: scale(1.1); /* 이미지 확대 비율 */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="guide.html">Guide</a>
+                <a href="news.html">News</a>
+                <a href="community.html">Community</a>
+                <a href="ranking.html">Ranking</a>
+                <a href="help.html">Help</a>
+            </div>
+            <div class="auth-links">
+                <a href="login.html">로그인</a> / <a href="join.html">회원가입</a>
+            </div>
+        </div>
+    </div>
+    <div class="logo_head_between_area_container">
+        <img src="assets/images/doors_title_header.png" class="logo_head_between_area" alt="Title Header">
+    </div>
+    <div class="head_area">
+        <p>FAQ</p>
+    </div>
+    <div class="content">
+        <div class="semi_title">
+            <p>자주하는 질문 TOP3</p>
+        </div>
+        <div class="commentbox1"></div>
+        <div class="commentbox2"></div>
+        <div class="commentbox3"></div>
+        <div class="button_area">
+            <div class="faq_button"><a href="helpFaQ.html">FAQ 바로가기</a></div>
+            <div class="qna_button">QnA 바로가기</div>
+        </div>
+    </div>    
+    <div class="footer">
+        <div class="footer-content">
+            <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
+                <p>더 도어 게임즈가 궁금하신가요?</p>
+            </a>
+            <p>©The Door Games</p>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.commentbox1').classList.add('fade-in');
+            }, 500); // 0.5초 후 첫 번째 박스 페이드인
+
+            setTimeout(function() {
+                document.querySelector('.commentbox2').classList.add('fade-in');
+            }, 1000); // 1초 후 두 번째 박스 페이드인
+
+            setTimeout(function() {
+                document.querySelector('.commentbox3').classList.add('fade-in');
+            }, 1500); // 1.5초 후 세 번째 박스 페이드인
+        });
+    </script>
+</body>
+</html>
